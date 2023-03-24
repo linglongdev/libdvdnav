@@ -1,0 +1,26 @@
+package:
+  id: libdvdnav
+  name: libdvdnav
+  version: 6.0.0
+  kind: lib
+  description: |
+    libdvdnav.
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/libdvdnav.git
+  version: master
+  commit: bacb4b7d4deb45c7831d238b0bc19ae80dfb8b10
+
+  patch: []
+variables:
+  extra_args: |
+    --enable-static \
+    --disable-silent-rules
+
+build:
+  kind: autotools
